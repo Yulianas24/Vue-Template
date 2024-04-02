@@ -1,5 +1,13 @@
+<script setup>
+import SidebarLink from '../Button/SidebarLink.vue'
+</script>
+
 <template>
   <div class="flex-none rounded-xl p-5 h-full w-1/4 bg-gray-400">
-    <p>Sidebar</p>
+    <p>Menu</p>
+    <div class="grid gap-3 content-start py-3">
+      <SidebarLink to="/" name="home" />
+      <SidebarLink to="/vue-components" name="components" />
+    </div>
   </div>
 </template>
