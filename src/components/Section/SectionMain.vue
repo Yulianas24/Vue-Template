@@ -5,7 +5,7 @@ import SectionSidebar from './SectionSidebar.vue'
 <template>
   <div class="flex gap-5 w-full h-full">
     <SectionSidebar />
-    <div class="rounded-xl p-5 w-full h-full bg-gray-400">
+    <div class="rounded-xl p-5 w-full h-full bg-gray-400 overflow-auto">
       <slot />
     </div>
   </div>
