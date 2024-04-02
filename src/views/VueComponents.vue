@@ -1,9 +1,23 @@
 <script setup>
 import { ref } from 'vue'
 import TabNavigation from '../components/Tab/TabNavigation.vue'
+import ConditionalRendering from '../components/Component/ConditionalRendering.vue'
+import ListRendering from '../components/Component/ListRendering.vue'
 
-const active_tab = ref('tab-1')
-const tab_list = ref(['tab-1', 'tab-2'])
+const active_tab = ref({
+  name: 'Conditional Rendering',
+  component: ConditionalRendering
+})
+const tab_list = ref([
+  {
+    name: 'Conditional Rendering',
+    component: ConditionalRendering
+  },
+  {
+    name: 'List Rendering',
+    component: ListRendering
+  }
+])
 </script>
 
 <template>
@@ -12,6 +26,8 @@ const tab_list = ref(['tab-1', 'tab-2'])
     <!-- navigation -->
     <TabNavigation :tab-list="tab_list" v-model="active_tab" />
     <!-- content -->
-    <div class="p-5 w-full h-full bg-gray-300 rounded-b-xl rounded-tr-xl"></div>
+    <div class="p-5 w-full h-full bg-gray-300 rounded-b-xl rounded-tr-xl">
+      <component :is="active_tab.component"></component>
+    </div>
   </div>
 </template>
