@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 w-screen">
+  <div class="flex-none p-5 w-full bg-gray-400">
     <p>Footer</p>
   </div>
 </template>

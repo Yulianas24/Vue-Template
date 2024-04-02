@@ -1,5 +1,12 @@
+<script setup>
+import SectionSidebar from './SectionSidebar.vue'
+</script>
+
 <template>
-  <div>
-    <p>Main Section</p>
+  <div class="flex gap-5 w-full h-full">
+    <SectionSidebar />
+    <div class="rounded-xl p-5 w-full h-full bg-gray-400">
+      <slot />
+    </div>
   </div>
 </template>
