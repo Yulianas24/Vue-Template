@@ -22,7 +22,7 @@ const tab_list = ref([
 
 <template>
   <div class="flex flex-col h-full">
-    <p class="mb-3">Vue Components</p>
+    <p class="mb-3">Vue Rendering</p>
     <!-- navigation -->
     <TabNavigation :tab-list="tab_list" v-model="active_tab" />
     <!-- content -->
