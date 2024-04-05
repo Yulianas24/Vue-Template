@@ -1,10 +1,10 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, shallowRef } from 'vue'
 import TabNavigation from '../components/Tab/TabNavigation.vue'
 import ConditionalRendering from '../components/Component/ConditionalRendering.vue'
 import ListRendering from '../components/Component/ListRendering.vue'
 
-const active_tab = ref({
+const active_tab = shallowRef({
   name: 'Conditional Rendering',
   component: ConditionalRendering
 })
