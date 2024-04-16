@@ -27,7 +27,9 @@ const tab_list = ref([
     <TabNavigation :tab-list="tab_list" v-model="active_tab" />
     <!-- content -->
     <div class="p-5 w-full h-full bg-gray-300 rounded-b-xl rounded-tr-xl">
-      <component :is="active_tab.component"></component>
+      <KeepAlive>
+        <component :is="active_tab.component"></component>
+      </KeepAlive>
     </div>
   </div>
 </template>
